@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-au" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Escape Room</title>
+</head>
+
+<body>
+
+<p>Test website</p>
+<form method="post">
+	<input name="Text1" type="text" /><input name="btnSubmit" type="button" value="Submit" /></form>
+<label id="Label1"></label>
+<p id="clue">Test</p>
+<script>
+const button = document.querySelector('input[name="btnSubmit"]');
+const paragraph = document.querySelector('p#clue');
+
+button.addEventListener('click', updateButton);
+
+function updateButton() {
+  if (button.value === 'Submit') {
+    paragraph.textContent = 'The machine has started!';
+  }
+}
+
+</script>
+
+</body>
+
+</html>
