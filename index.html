@@ -5,24 +5,28 @@
 <meta content="en-au" http-equiv="Content-Language" />
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>Escape Room</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
 <p>Test website</p>
-<form method="post">
-	<input name="Text1" type="text" /><input name="btnSubmit" type="button" value="Submit" /></form>
-<label id="Label1"></label>
+<input name="inputText" type="text" />
+<input name="btnSubmit" type="button" value="Submit" />
 <p id="clue">Test</p>
 <script>
 const button = document.querySelector('input[name="btnSubmit"]');
+const input = document.querySelector('input[name="inputText"]')
 const paragraph = document.querySelector('p#clue');
 
 button.addEventListener('click', updateButton);
 
 function updateButton() {
-  if (button.value === 'Submit') {
-    paragraph.textContent = 'The machine has started!';
+  if (input.value === 'test') {
+    alert("correct")
+    paragraph.textContent = 'The answer is 31';
+  } else {
+    alert("wrong")
   }
 }
 
