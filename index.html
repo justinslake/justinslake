@@ -10,10 +10,26 @@
 
 <body>
 
-<p>Test website</p>
+<h1>Escape Room Task</h1>
+<p>For this task, work out what the following text represents and perform each action</p>
+<p>Then take the first letter of each piece going A8 to H1, rows first and submit the string of letters</p>
+<ul>
+  <li>B2C3</li>
+  <li>D7D5</li>
+  <li>C3D5</li>
+  <li>E7E5</li>
+  <li>E2E4</li>
+  <li>E8D7</li>
+  <li>D2D4</li>
+  <li>D8H4</li>
+  <li>D1G4</li>
+  <li>H4G4</li>
+  <li>G1H3</li>
+  <li>B2C6</li>
+</ul>
 <input name="inputText" type="text" />
 <input name="btnSubmit" type="button" value="Submit" />
-<p id="clue">Test</p>
+<p id="clue"></p>
 <script>
 const button = document.querySelector('input[name="btnSubmit"]');
 const input = document.querySelector('input[name="inputText"]')
@@ -22,8 +38,7 @@ const paragraph = document.querySelector('p#clue');
 button.addEventListener('click', updateButton);
 
 function updateButton() {
-  if (input.value === 'test') {
-    alert("correct")
+  if (input.value === 'rbbkrpppkpppkkpppqkpppppprbkbr') {
     paragraph.textContent = 'The answer is 31';
   } else {
     alert("wrong")
